@@ -6,6 +6,8 @@ import configureStore from '../store/configureStore';
 import RouterComponent from './Routes';
 
 const store = configureStore();
+import { Text, View } from 'react-native';
+import LoginPage from './login/LoginPage';
 
 class App extends Component {
     constructor(props) {
@@ -18,6 +20,11 @@ class App extends Component {
             <RouterComponent/>
         </Provider>
     );
+        return (
+            <View> 
+                <LoginPage />
+            </View>
+        );
     }
 }
 

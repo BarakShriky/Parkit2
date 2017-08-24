@@ -1,4 +1,5 @@
 export default {
     parkers: [],
-    leavers: []
+    leavers: [],
+    login: false,
 };
