@@ -1,17 +1,21 @@
-/* import * as types from "./actionTypes";
-import AuthorApi from "../api/mockAuthorApi"; -- import google maps api
+import * as types from "./actionTypes";
+//import AuthorApi from "../api/mockAuthorApi";
 
-export function loadAuthorSuccess(authors) {
-    return {type: types.LOAD_AUTHORS_SUCCESS, authors};
+export function UserLoggedIn(login) {
+    return {type: types.USER_LOGGED_IN, login};
 }
 
+// export function loadAuthorSuccess(authors) {
+//     return {type: types.LOAD_AUTHORS_SUCCESS, authors};
+// }
 
-export function loadAuthors() {
-    return function(dispatch) {
-        return AuthorApi.getAllAuthors().then(authors => {
-            dispatch(loadAuthorSuccess(authors));
-        }).catch(error => {
-            throw(error);
-        });
-    };
-} */
+
+// export function loadAuthors() {
+//     return function(dispatch) {
+//         return AuthorApi.getAllAuthors().then(authors => {
+//             dispatch(loadAuthorSuccess(authors));
+//         }).catch(error => {
+//             throw(error);
+//         });
+//     };
+// }

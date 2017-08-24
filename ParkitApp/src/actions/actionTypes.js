@@ -1,1 +1,1 @@
-//export const LOAD_COURSES_SUCCESS = "LOAD_COURSES_SUCCESS";
+export const USER_LOGGED_IN = "USER_LOGGED_IN";

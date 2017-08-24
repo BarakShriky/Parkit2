@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
-import { Text } from 'react-native';
-import { Header } from './common';
+import { Text, View } from 'react-native';
+import LoginPage from './login/LoginPage';
 
 class App extends Component {
     render() {
         return (
-            <Header txt="hahahah" /> 
+            <View> 
+                <LoginPage />
+            </View>
         );
     }
 }
