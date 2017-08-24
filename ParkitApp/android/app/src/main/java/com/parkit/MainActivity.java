@@ -2,6 +2,8 @@ package com.parkit;
 
 import com.facebook.react.ReactActivity;
 
+import com.airbnb.android.react.maps.MapsPackage;
+
 public class MainActivity extends ReactActivity {
 
     /**
@@ -12,4 +14,5 @@ public class MainActivity extends ReactActivity {
     protected String getMainComponentName() {
         return "Parkit";
     }
+    
 }

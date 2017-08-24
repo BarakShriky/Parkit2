@@ -1,6 +1,7 @@
-/* import * as types from "./actionTypes";
-import AuthorApi from "../api/mockAuthorApi"; -- import google maps api
+import * as types from "./actionTypes";
+//import AuthorApi from "../api/mockAuthorApi"; -- import google maps api
 
+/*
 export function loadAuthorSuccess(authors) {
     return {type: types.LOAD_AUTHORS_SUCCESS, authors};
 }
