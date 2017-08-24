@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import MapView from 'react-native-maps';
 import { Header } from './common';
+import { Provider } from 'react-redux';
+import configureStore from '../store/configureStore';
+import RouterComponent from './Routes';
+
+const store = configureStore();
 
 class App extends Component {
     constructor(props) {
@@ -10,15 +14,9 @@ class App extends Component {
 
     render() {
     return (
-        <MapView
-            style={ styles.map }
-            initialRegion={{
-                latitude: 37.78825,
-                longitude: -122.4324,
-                latitudeDelta: 0.0922,
-                longitudeDelta: 0.0421,
-            }}
-        />
+        <Provider store={store}>
+            <RouterComponent/>
+        </Provider>
     );
     }
 }
