@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import * as parkitActions from './../../actions/parkitActions';
+import { Actions } from 'react-native-router-flux';
+
 import {
     View,
     TouchableOpacity,
@@ -32,6 +34,7 @@ class LoginPage extends Component {
             } else {
                alert('Login success with permissions: '
                +result.grantedPermissions.toString());
+               Actions.Card()
             }
          },
          function(error) {

@@ -1,12 +1,9 @@
 diff a/ParkitApp/android/settings.gradle b/ParkitApp/android/settings.gradle	(rejected hunks)
 @@ -1,5 +1,10 @@
  rootProject.name = 'Parkit'
-+<<<<<<< HEAD
  include ':react-native-maps'
  project(':react-native-maps').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-maps/lib/android')
-+=======
-+include ':react-native-fbsdk'
-+project(':react-native-fbsdk').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-fbsdk/android')
-+>>>>>>> 40157994f1261fd3bcaaf0478a7ddf050e822624
+include ':react-native-fbsdk'
+project(':react-native-fbsdk').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-fbsdk/android')
  
  include ':app'
