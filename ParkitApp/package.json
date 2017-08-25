@@ -22,6 +22,8 @@
     "react-native-router-flux": "^4.0.0-beta.19",
     "react-native-side-menu": "^1.0.2",
     "react-native-vector-icons": "^4.3.0",
+    "react-native": "^0.47.2",
+    "react-native-fbsdk": "^0.6.0",
     "react-redux": "4.4.5",
     "react-router": "2.4.0",
     "react-router-redux": "4.0.4",
