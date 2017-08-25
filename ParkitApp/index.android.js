@@ -15,9 +15,7 @@ export default class Parkit extends Component {
   render() {
     return (
       <Provider store={store}>
-      <View stytle={{ flex: 1 }}>
         <App />
-      </View>
       </Provider>
     );
   }
