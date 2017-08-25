@@ -6,10 +6,10 @@ import {
     View,
     TouchableOpacity,
     Text,
+    TextInput,
     StyleSheet
 } from 'react-native';
 import {bindActionCreators} from "redux";
-import FBSDK, { LoginManager } from 'react-native-fbsdk';
 import ParkitLogo from '../common/ParkitLogo';
 import {connect} from "react-redux";
 
@@ -21,38 +21,31 @@ class LoginPage extends Component {
             login: false
         }
 
-        this._fbAuth = this._fbAuth.bind(this);
-        this.logUser = this.logUser.bind(this);
+        // this._fbAuth = this._fbAuth.bind(this);
+        // this.logUser = this.logUser.bind(this);
         
     }
 
-    _fbAuth() {
-      LoginManager.logInWithReadPermissions(['public_profile']).then(
-         function(result) {
-            if (result.isCancelled) {
-               alert('Login cancelled');
-            } else {
-               alert('Login success with permissions: '
-               +result.grantedPermissions.toString());
-               Actions.Card()
-            }
-         },
-         function(error) {
-            alert('Login fail with error: ' + error);
-         }
-      );
-   }
-
-   logUser(isLogged) {
-        this.props.actions.UserLoggedIn(isLogged);
-        this.setState({login: this.props.login});
-   }
-
     render() {
         return (
-        <View style={styles.container}>
+            <View style={styles.container}>
             <ParkitLogo />
             <Text style={styles.textBox}>App That Solves Your Problem </Text>
+            <TextInput
+                style={{height: 40, top:300}}
+                placeholder="UserName"
+                onChangeText={(text) => this.setState({text})}
+            />
+            <TextInput
+                style={{height: 40, top:320}}
+                placeholder="Password"
+                onChangeText={(text) => this.setState({text})}
+            />
+            <TouchableOpacity style={styles.contentLogin} onPress={() => Actions.map_screen()}>
+                <Text style={styles.textBoxLogin}>
+                    Login
+                </Text>
+            </TouchableOpacity>
             <TouchableOpacity style={styles.content} onPress={this._fbAuth}>
                 <Text style={styles.textBoxLogin}>
                     Login With Facebook

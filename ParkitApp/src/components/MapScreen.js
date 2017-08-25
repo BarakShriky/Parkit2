@@ -99,7 +99,6 @@ class MapScreen extends Component {
     render() {
         return (
             <View style={styles.mainContainer}>
-                <Header txt="Find your spot" />
                 <View style={styles.container}>
                     {this.state.region.latitude ? 
                         <MapView

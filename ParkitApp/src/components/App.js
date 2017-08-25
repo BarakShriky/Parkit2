@@ -18,12 +18,7 @@ class App extends Component {
             <RouterComponent/>
         </Provider>
     );
-        return (
-            <View> 
-                <LoginPage />
-            </View>
-        );
-    }
+    };
 }
 
 const styles = StyleSheet.create({
